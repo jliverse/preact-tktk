@@ -1,5 +1,7 @@
 const includeDebug = process.env.NODE_ENV === 'development';
+
 const minifyPlugin = !includeDebug && {
+  'postcss-import': {},
   'postcss-clean': {
     restructuring: false
   }

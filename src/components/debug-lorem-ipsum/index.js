@@ -2,6 +2,8 @@ import { h, Component } from 'preact';
 import style from './style.less';
 
 export default class extends Component {
+  state = {};
+
   render() {
     return (
       <p>

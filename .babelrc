@@ -2,7 +2,11 @@
   "env": {
     "test": {
       "presets": [["es2015", { "modules": false }]],
-      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-class-properties",
+        "dynamic-import-node"
+      ]
     }
   },
   "plugins": [
@@ -14,6 +18,7 @@
       }
     ],
     ["transform-function-bind"],
+    ["transform-class-properties"],
     ["transform-decorators-legacy"],
     ["transform-object-rest-spread"],
     ["transform-react-jsx", { "pragma": "h" }]
