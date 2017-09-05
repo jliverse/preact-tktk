@@ -1,14 +1,13 @@
 const includeDebug = process.env.NODE_ENV === 'development';
 
 const minifyPlugin = !includeDebug && {
-  'postcss-import': {},
   'postcss-clean': {
     restructuring: false
   }
 };
 
 module.exports = {
-  plugins: Object.assign({}, minifyPlugin, {
+  plugins: Object.assign({ 'postcss-import': {} }, minifyPlugin, {
     autoprefixer: {
       browsers: [
         'IE 11',
@@ -17,7 +16,8 @@ module.exports = {
         'last 2 Chrome versions',
         'last 2 Firefox versions',
         'last 2 Safari versions'
-      ]
+      ],
+      grid: false
     }
   })
 };

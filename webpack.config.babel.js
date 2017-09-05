@@ -71,7 +71,6 @@ module.exports = {
     extensions: ['.js', '.json', '.less'],
     alias: {
       // NOTE: Convenience aliases are repeated in package.json moduleNameMapper.
-      components: resolve(__dirname, 'src/components'),
       css: resolve(__dirname, 'src/css'),
       lib: resolve(__dirname, 'src/lib')
     }

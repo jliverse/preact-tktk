@@ -1,5 +1,5 @@
 import { h, render } from 'preact';
-import { renderAsHTML, renderAsDocument } from 'lib/preact';
+import { renderAsHTML } from 'lib/preact';
 
 import UI from '../index';
 
@@ -9,6 +9,7 @@ test('UI renders', () => {
 });
 
 test('UI is wrapped in a paragraph', () => {
-  const document = renderAsDocument(<UI />);
-  expect(document.find('p').text()).toMatch(/^Lorem ipsum/);
+  const html = renderAsHTML(<UI />);
+  expect(html).toMatch(/^\<p\>Lorem ipsum.*laborum.\<\/p\>$/);
+  expect(html).toMatchSnapshot();
 });
